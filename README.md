@@ -38,7 +38,7 @@ Write a function that accepts 3 arguments: two numbers and one letter. The funct
 
 Create a new branch and name it with your name. You will upload this branch only. You are allowed to do several commits. Make sure to include all the additional files you may have created. 
 
-### After submiting
+### After submitting
 
 After you have pushed your code, please, notify us through a mail that your done with your task.
 

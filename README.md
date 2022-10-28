@@ -34,11 +34,15 @@ Write a function that accepts 3 arguments: two numbers and one letter. The funct
 
 -- The result of the division will be shown to the user and on the console.
 
-### Evaluation Criteria
+### Deliverables
 
-- Cleanliness of the code
-- Programming principles/best practices
+Create a new branch and name it with your name. You will upload this branch only. You are allowed to do several commits. Make sure to include all the additional files you may have created. 
 
-### Code Submit
+### After submiting
 
-After you have pushed your code, you may submit the assignment on the assignment page.
+After you have pushed your code, please, notify us through a mail that your done with your task.
+
+
+All the best and happy coding,
+
+The Valores Digital Team

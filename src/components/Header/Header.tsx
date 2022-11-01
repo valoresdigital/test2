@@ -3,6 +3,10 @@ import styles from './Header.module.scss';
 
 export const Header = () => {
   return (
-    <div>Header</div>
+    <header className='header'>
+      <div className='header__container'>
+        <img className='header__container--img'/>  
+      </div>
+    </header>
   )
 }

@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import './Vars.scss';
 
-body {
+html {
+    min-height: 100%;
+    position: relative;
+}
 
+body {
     font-family: $font-family;
     font-size: 16px;
     box-sizing: border-box;
@@ -11,4 +15,3 @@ body {
     color: $color-neutral;
     background-color: $color-primary;
 }
-

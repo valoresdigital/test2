@@ -1,0 +1,19 @@
+@import '../../styles/_Vars.scss';
+
+.header {
+    opacity: 0.8;
+    width: 100%;
+    background-color: $color-secundary;
+    position: sticky;
+    top: 0px;
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        padding: 0 10px; 
+        &__img {
+            width: 170px; 
+        }
+    }
+}

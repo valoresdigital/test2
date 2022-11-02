@@ -1,10 +1,12 @@
-import {IDataResult,IError } from '../typing/DataInterface'
+import {IDataResult,IError } from '../typing/DataInterface';
 
 export  const ClassError =(dataResult:IDataResult,setError:React.Dispatch<React.SetStateAction<IError>>) =>{
     let clase= ""
-    if(dataResult.message ==="* Error: Numbers must be integers" ||
-    dataResult.message === '* Error: Numbers must be positive' ||
-    dataResult.message === '* Error: Verify number / Denominator different from 0'){
+    if(
+        dataResult.message ==="* Error: Numbers must be integers" ||
+        dataResult.message === '* Error: Numbers must be positive' ||
+        dataResult.message === '* Error: Verify number / Denominator different from 0'
+    ){
         setError({
             error__letter:'',
             error__Integer:'error__Integer'
@@ -15,7 +17,7 @@ export  const ClassError =(dataResult:IDataResult,setError:React.Dispatch<React.
             error__letter:'error__letter'
         })
     }
-    return clase
+    return clase;
 }
 
 export const  ErrorMessageRender = (message:string) =>{

@@ -5,13 +5,12 @@ import { ClassError } from '../../utils/MainError';
 import { IDataProps } from '../../typing/DataInterface';
 
 
-
-export const Form = ({setData,data,dataResult,setDataResult}:IDataProps) => {
+export const Form = ({ setData, data, dataResult, setDataResult }:IDataProps) => {
     const {num1, num2, operation } = data;
     const [error , setError] = useState({
         error__Integer: '',
         error__letter:''
-    })
+    });
     const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
         setData({
             ...data,
@@ -23,10 +22,9 @@ export const Form = ({setData,data,dataResult,setDataResult}:IDataProps) => {
         
         const result:any = validationMainOperation(operation, num1, num2)
         console.log("result:", result);
-        setDataResult(result)
-
-         
+        setDataResult(result)  
     }
+
     useEffect(() => {
         if(dataResult.result !== null){
             setData({
@@ -58,33 +56,28 @@ export const Form = ({setData,data,dataResult,setDataResult}:IDataProps) => {
                 onChange={handleChange}
             />
         </label>
-
-
-            <label  className={styles.form__label}>
+        <label  className={styles.form__label}>
             <p className={styles.form__label__title}>Second number:</p>
-                <input
-                    value={num2}
-                    className={`${styles.form__label__input}  ${error.error__Integer}`}
-                    type='text'
-                    placeholder='Type your second number'
-                    name='num2'
-                    onChange={handleChange}
-                />
-            </label>
-
-
-            <label  className={styles.form__label}>
+            <input
+                value={num2}
+                className={`${styles.form__label__input}  ${error.error__Integer}`}
+                type='text'
+                placeholder='Type your second number'
+                name='num2'
+                onChange={handleChange}
+            />
+        </label>
+        <label  className={styles.form__label}>
             <p className={styles.form__label__title}>Choose operation:</p>
-                <input
+            <input
                 value={operation}
-                    className={`${styles.form__label__input} ${error.error__letter}`}
-                    type='text'
-                    placeholder='Type letter S, R, M or D'
-                    name='operation'
-                    onChange={handleChange}
-                />
-            </label>
-
+                className={`${styles.form__label__input} ${error.error__letter}`}
+                type='text'
+                placeholder='Type letter S, R, M or D'
+                name='operation'
+                onChange={handleChange}
+            />
+        </label>
         <input className={styles.form__btn} type='submit' value='Submit'/>
     </form>
     </div>

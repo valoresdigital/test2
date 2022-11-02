@@ -1,8 +1,8 @@
-export const validationMainOperation = ( letter:string, num1 : string, num2 : string) => {
+export const validationMainOperation = ( letter:string, num1 : string, num2 : string ) => {
     let letterValidated = validateLetter(letter);
     let result = null;
     let message = '* Error: Please choose a letter';
-    let objResult={}
+    let objResult={};
     
     switch (letterValidated) {
         case 'S':
@@ -28,7 +28,7 @@ export const validationMainOperation = ( letter:string, num1 : string, num2 : st
                 message = 'Multiply';
                 result = Number(num1) * Number(num2);
             } else {
-                message = '* Error: Numbers must be positive'
+                message = '* Error: Numbers must be positive';
                 return { message, result, letterValidated }
             }
             return { message, result, letterValidated }
@@ -48,7 +48,7 @@ export const validationMainOperation = ( letter:string, num1 : string, num2 : st
 
 const validateLetter = (letter: string) => {
     if(typeof(letter) === 'string' && letter.length === 1 ){
-        let UpperCaseLetter = letter.toUpperCase()
+        let UpperCaseLetter = letter.toUpperCase();
         return UpperCaseLetter;
     }
     return false;

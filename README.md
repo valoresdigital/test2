@@ -1,6 +1,59 @@
+<p align="center">
+  <a href="#specifications">Specifications</a> •
+  <a href="https://vdtest2.netlify.app" target="_blank">Demo</a> •
+</p>
+
+## Folder overview
+
+<details>
+<summary>Detailed folder structure</summary>
+
+```
+.
+public/
+src/
+| assets/
+|-- components/
+|   |-- Form/
+|   |   |-- Form.tsx
+|   |   |-- Form.module.scss
+|-- pages/
+|   |-- Home/
+|   |   |-- Home.tsx
+|   |   |-- Home.module.scss
+|-- styles/
+|   |-- _Vars.scss
+|   |-- globals.scss
+|-- typing/
+|   |-- DataInterface.ts
+|-- utils/
+|   |-- MainError.ts
+|   |-- MainFunctionalities.ts
+|-- main.tsx
+|-- vite-env.d.ts
+```
+</details>
+
+## Specifications 
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/docs/)
+- [SASS](https://sass-lang.com/)
+
+
+## Project Scripts
+| Name | Description |
+| ------ | ------ |
+| npm install | install all dependencies |
+| npm run dev | run server|
+
+
+
 ### Objective
 
 Using the language of your choice, you should put into practice programming principles in order to obtain the desired functionality.
+
+### Functionalities 
+Located in MainFunctionalities.ts folder.
 
 ### Task
 

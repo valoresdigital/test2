@@ -1,4 +1,44 @@
+@import '../../styles//Vars';
+
 .form{
     display: flex;
     justify-content: center; 
+    &__label{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+        @media (min-width: $mobile) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__title{
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        &__input{
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            padding: 0 5px;
+        }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        @media (min-width: $mobile) {
+            max-width: 359px;
+        } 
+    }
+    &__btn{
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        font-weight: 700;
+        letter-spacing:1px;
+        background-color: $color-neutral;
+        color: $color-secundary;
+    }
 }

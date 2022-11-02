@@ -15,3 +15,7 @@ body {
     color: $color-neutral;
     background-color: $color-primary;
 }
+.error__letter,
+.error__Integer{
+    border: 1px solid red;
+}

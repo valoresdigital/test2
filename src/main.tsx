@@ -5,9 +5,7 @@ import './styles/globals.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <div className='home'>
-      <Home />
-    </div>
+    <Home />
   </React.StrictMode>
 )
 

@@ -9,6 +9,11 @@ export interface IData {
     letterValidated: string
   }
 
+  export interface IError {
+    error__Integer: string,
+        error__letter:string
+  }
+
   export interface IDataProps  {
     setData: React.Dispatch<React.SetStateAction<IData>>,
     data:IData,

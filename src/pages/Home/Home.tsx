@@ -21,7 +21,7 @@ const [ dataResult, setDataResult ] = useState<IDataResult>({
   return (
     <div className={styles.home}>
         <Header/>
-        <h3> Test 2</h3>
+        <h3 className={styles.home__title}>Test 2</h3>
         <Form 
           setData={setData} data={data}
           dataResult={dataResult} setDataResult={setDataResult}

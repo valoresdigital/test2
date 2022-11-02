@@ -1,30 +1,26 @@
 import React from 'react';
 import {IDataOnlyProps } from '../../typing/DataInterface'
-import './Card.module.scss';
+import {ErrorMessageRender } from '../../utils/MainError'
+import styles from './Card.module.scss';
 
 export const Card = ({dataResult}:IDataOnlyProps) => {
   const { message,result,letterValidated} = dataResult
   return (
-    <section>
-      <div>
-        <ul>
+    <section className={styles.card}>
+        <ul className={styles.card__list}>
           {
-          message==='Numbers must be integers'||
-          message==='Numbers must be positive'||
-          message==='Denominator must be different from 0'
-          ?<p >Error: {message} </p>
+          ErrorMessageRender(message)
+          ?<p className={styles.card__list__error}>{message} </p>
           :
           <li>
-            el resultado de la operacion con la letra {letterValidated}
+            Operation with <strong>{letterValidated}</strong> is a <strong>{message}</strong>
             <br/>
-            result: {result}
-            <br/>
-            Operation: {message}
+            Result: <strong>{result}</strong>
+            <br/> 
           </li>
           }
           
         </ul>
-      </div>
     </section>
   )
 }

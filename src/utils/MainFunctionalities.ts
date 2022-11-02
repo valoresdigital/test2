@@ -1,43 +1,43 @@
 export const validationMainOperation = ( letter:string, num1 : string, num2 : string) => {
     let letterValidated = validateLetter(letter);
     let result = null;
-    let message = 'NotFound';
+    let message = '* Error: Please choose a letter';
     let objResult={}
     
     switch (letterValidated) {
         case 'S':
-            if(validateInteger(num1, num2)){
+            if(validateInteger(num1, num2) && num1 !== '' && num2 !== '' ){
                 message = 'Sum';
                 result = Number(num1) + Number(num2);
             } else {
-                message = 'Numbers must be integers';
+                message = '* Error: Numbers must be integers';
                 return objResult= { message, result, letterValidated }
             }
             return  objResult= { message, result, letterValidated}
         case 'R':
-            if(validateInteger(num1, num2)){
+            if(validateInteger(num1, num2) && num1 !== '' && num2 !== ''){
                 message = 'Rest';
                 result = Number(num1) - Number(num2);
             } else {
-                message = 'Numbers must be integers';
+                message = '* Error: Numbers must be integers';
                 return { message, result, letterValidated }
             }
             return { message, result, letterValidated}
         case 'M':
-            if(validatePositiveNumber(num1, num2)){
+            if(validatePositiveNumber(num1, num2) && num1 !== '' && num2 !== ''){
                 message = 'Multiply';
                 result = Number(num1) * Number(num2);
             } else {
-                message = 'Numbers must be positive'
+                message = '* Error: Numbers must be positive'
                 return { message, result, letterValidated }
             }
             return { message, result, letterValidated }
         case 'D':
-            if(validateDominator(num1, num2)){
+            if(validateDominator(num1, num2) && num1 !== '' && num2 !== ''){
                 message = 'Devide';
                 result = Number(num1) / Number(num2);
             } else {
-                message = 'Denominator must be different from 0';
+                message = '* Error: Verify number / Denominator different from 0';
                 return { message, result, letterValidated }
             }
             return { message, result, letterValidated }
